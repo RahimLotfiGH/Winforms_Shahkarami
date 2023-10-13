@@ -25,7 +25,7 @@ namespace Menu
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 //richTxtBox.LoadFile(openDialog.FileName);
-                richTxtBox.Text = File.ReadAllText(openDialog.FileName);
+                richTxtBox.Text = System.IO.File.ReadAllText(openDialog.FileName);
             }
         }
 
@@ -39,11 +39,16 @@ namespace Menu
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            HandleSaveFile();
+        }
+
+        private void HandleSaveFile()
+        {
             SaveFileDialog saveDialog = InitializeSaveDialog();
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(saveDialog.FileName, richTxtBox.Text);
+                System.IO.File.WriteAllText(saveDialog.FileName, richTxtBox.Text);
                 //richTxtBox.SaveFile(saveDialog.FileName);
             }
         }
@@ -63,10 +68,10 @@ namespace Menu
             fontDialog.ShowColor = true;
             if (fontDialog.ShowDialog() == DialogResult.OK)
             {
-                //richTxtBox.Font = fontDialog.Font;
-                //richTxtBox.ForeColor = fontDialog.Color;
-                richTxtBox.SelectionFont = fontDialog.Font;
-                richTxtBox.SelectionColor = fontDialog.Color;
+                richTxtBox.Font = fontDialog.Font;
+                richTxtBox.ForeColor = fontDialog.Color;
+                //richTxtBox.SelectionFont = fontDialog.Font;
+                //richTxtBox.SelectionColor = fontDialog.Color;
             }
         }
 
@@ -97,6 +102,40 @@ namespace Menu
             folderDialog.Description = "Select a folder... ";
             folderDialog.ShowNewFolderButton = true;
             return folderDialog;
+        }
+
+
+        private void ExitMenuItem_Click(object sender, EventArgs e)
+        {
+            var dialogResult = MessageBox.Show("Do you wanna save the file before closing? "
+                ,"Exit"
+                ,MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                HandleSaveFile();
+            }
+
+            Environment.Exit(0);
+        }
+
+        private void NewMenuItem_Click(object sender, EventArgs e)
+        {
+            richTxtBox.Text = string.Empty;
+        }
+
+        private void copyMenuItem_Click(object sender, EventArgs e)
+        {
+            richTxtBox.Copy();
+        }
+
+        private void cutMenuItem_Click(object sender, EventArgs e)
+        {
+            richTxtBox.Cut();
+        }
+
+        private void pasteMenuItem_Click(object sender, EventArgs e)
+        {
+            richTxtBox.Paste();
         }
     }
 }
