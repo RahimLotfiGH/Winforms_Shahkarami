@@ -74,6 +74,7 @@
             this.btnFont.TabIndex = 3;
             this.btnFont.Text = "Font";
             this.btnFont.UseVisualStyleBackColor = true;
+            this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
             // btnColor
             // 
@@ -83,6 +84,7 @@
             this.btnColor.TabIndex = 4;
             this.btnColor.Text = "Color";
             this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnFolder
             // 
@@ -92,6 +94,7 @@
             this.btnFolder.TabIndex = 5;
             this.btnFolder.Text = "Folder";
             this.btnFolder.UseVisualStyleBackColor = true;
+            this.btnFolder.Click += new System.EventHandler(this.btnFolder_Click);
             // 
             // formMain
             // 
