@@ -69,8 +69,8 @@
             this.copyRightStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelPicLgAndLbl = new System.Windows.Forms.Panel();
-            this.picBoxLg = new System.Windows.Forms.PictureBox();
             this.lblPicLgPanel = new System.Windows.Forms.Label();
+            this.picBoxLg = new System.Windows.Forms.PictureBox();
             this.picBox = new System.Windows.Forms.PictureBox();
             fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
@@ -251,6 +251,7 @@
             // tNew
             // 
             this.tNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tNew.Image = global::Menu.Properties.Resources.new_25355;
             this.tNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tNew.Name = "tNew";
             this.tNew.Size = new System.Drawing.Size(23, 22);
@@ -259,6 +260,7 @@
             // tCopy
             // 
             this.tCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tCopy.Image = global::Menu.Properties.Resources.copy_23057;
             this.tCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tCopy.Name = "tCopy";
             this.tCopy.Size = new System.Drawing.Size(23, 22);
@@ -267,6 +269,7 @@
             // tPaste
             // 
             this.tPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tPaste.Image = global::Menu.Properties.Resources.copy_paste_document_file_1557;
             this.tPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tPaste.Name = "tPaste";
             this.tPaste.Size = new System.Drawing.Size(23, 22);
@@ -275,6 +278,7 @@
             // tCut
             // 
             this.tCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tCut.Image = global::Menu.Properties.Resources.cut_icon_icons_com_52391;
             this.tCut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tCut.Name = "tCut";
             this.tCut.Size = new System.Drawing.Size(23, 22);
@@ -283,6 +287,7 @@
             // tSave
             // 
             this.tSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tSave.Image = global::Menu.Properties.Resources.save_78348;
             this.tSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tSave.Name = "tSave";
             this.tSave.Size = new System.Drawing.Size(23, 22);
@@ -296,6 +301,7 @@
             // tColor
             // 
             this.tColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tColor.Image = global::Menu.Properties.Resources.Photos_31086;
             this.tColor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tColor.Name = "tColor";
             this.tColor.Size = new System.Drawing.Size(23, 22);
@@ -304,6 +310,7 @@
             // tFont
             // 
             this.tFont.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tFont.Image = global::Menu.Properties.Resources.Oxygen_Icons_org_Oxygen_Apps_preferences_desktop_font_256;
             this.tFont.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tFont.Name = "tFont";
             this.tFont.Size = new System.Drawing.Size(23, 22);
@@ -317,6 +324,7 @@
             // PicBoxBtn
             // 
             this.PicBoxBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PicBoxBtn.Image = global::Menu.Properties.Resources.picture_icon_251069;
             this.PicBoxBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PicBoxBtn.Name = "PicBoxBtn";
             this.PicBoxBtn.Size = new System.Drawing.Size(23, 22);
@@ -441,6 +449,17 @@
             this.panelPicLgAndLbl.Visible = false;
             this.panelPicLgAndLbl.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
+            // lblPicLgPanel
+            // 
+            this.lblPicLgPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblPicLgPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPicLgPanel.Location = new System.Drawing.Point(0, 157);
+            this.lblPicLgPanel.Name = "lblPicLgPanel";
+            this.lblPicLgPanel.Padding = new System.Windows.Forms.Padding(2);
+            this.lblPicLgPanel.Size = new System.Drawing.Size(135, 26);
+            this.lblPicLgPanel.TabIndex = 17;
+            this.lblPicLgPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // picBoxLg
             // 
             this.picBoxLg.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -454,17 +473,6 @@
             this.picBoxLg.TabStop = false;
             this.picBoxLg.Click += new System.EventHandler(this.picBox_Click);
             this.picBoxLg.MouseLeave += new System.EventHandler(this.picBoxLg_MouseLeave);
-            // 
-            // lblPicLgPanel
-            // 
-            this.lblPicLgPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblPicLgPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPicLgPanel.Location = new System.Drawing.Point(0, 157);
-            this.lblPicLgPanel.Name = "lblPicLgPanel";
-            this.lblPicLgPanel.Padding = new System.Windows.Forms.Padding(2);
-            this.lblPicLgPanel.Size = new System.Drawing.Size(135, 26);
-            this.lblPicLgPanel.TabIndex = 17;
-            this.lblPicLgPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picBox
             // 
