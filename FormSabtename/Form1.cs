@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FormSabtename
@@ -43,10 +40,10 @@ namespace FormSabtename
 
         private void radioButtons_CheckedChanged(object sender, EventArgs e)
         {
-           var btn = (RadioButton)sender;
+            var btn = (RadioButton)sender;
             switch (btn.Name)
             {
-                case "RadioBtnBackBlue": 
+                case "RadioBtnBackBlue":
                     BackColor = Color.Blue;
                     break;
                 case "RadioBtnBackGray":
@@ -68,6 +65,34 @@ namespace FormSabtename
                 default:
                     break;
             }
+        }
+        List<string> checkLanguages = new List<string>();
+        StringBuilder str;
+
+
+        private void checkedListBoxLanguage_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                checkLanguages.Distinct();
+                checkLanguages.Add(checkedListBoxLanguage.Items[e.Index].ToString());
+            }
+            else if (e.NewValue == CheckState.Unchecked)
+            {
+                checkLanguages.Remove(checkedListBoxLanguage.Items[e.Index].ToString());
+            }
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            str = new StringBuilder();
+            checkLanguages.Distinct();
+
+            foreach (var item in checkLanguages)
+
+                str.AppendLine(item);
+            MessageBox.Show(str.ToString());
+
         }
     }
 }

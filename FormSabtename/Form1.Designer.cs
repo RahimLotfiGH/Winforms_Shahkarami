@@ -47,6 +47,8 @@
             this.RadioBtnBackYellow = new System.Windows.Forms.RadioButton();
             this.RadioBtnBackGray = new System.Windows.Forms.RadioButton();
             this.RadioBtnBackBlue = new System.Windows.Forms.RadioButton();
+            this.checkedListBoxLanguage = new System.Windows.Forms.CheckedListBox();
+            this.btnLanguage = new System.Windows.Forms.Button();
             this.GbxLetterDigit.SuspendLayout();
             this.GbNameAndAge.SuspendLayout();
             this.GbForeColor.SuspendLayout();
@@ -159,7 +161,7 @@
             this.GbForeColor.Controls.Add(this.RadioBtnForekBlue);
             this.GbForeColor.Controls.Add(this.RadioBtnForeBlack);
             this.GbForeColor.Controls.Add(this.RadioBtnForeGreen);
-            this.GbForeColor.Location = new System.Drawing.Point(429, 33);
+            this.GbForeColor.Location = new System.Drawing.Point(240, 33);
             this.GbForeColor.Name = "GbForeColor";
             this.GbForeColor.Size = new System.Drawing.Size(200, 100);
             this.GbForeColor.TabIndex = 8;
@@ -207,7 +209,7 @@
             this.GbBackColor.Controls.Add(this.RadioBtnBackYellow);
             this.GbBackColor.Controls.Add(this.RadioBtnBackGray);
             this.GbBackColor.Controls.Add(this.RadioBtnBackBlue);
-            this.GbBackColor.Location = new System.Drawing.Point(429, 170);
+            this.GbBackColor.Location = new System.Drawing.Point(240, 170);
             this.GbBackColor.Name = "GbBackColor";
             this.GbBackColor.Size = new System.Drawing.Size(200, 100);
             this.GbBackColor.TabIndex = 9;
@@ -250,11 +252,37 @@
             this.RadioBtnBackBlue.UseVisualStyleBackColor = true;
             this.RadioBtnBackBlue.Click += new System.EventHandler(this.radioButtons_CheckedChanged);
             // 
+            // checkedListBoxLanguage
+            // 
+            this.checkedListBoxLanguage.FormattingEnabled = true;
+            this.checkedListBoxLanguage.Items.AddRange(new object[] {
+            "فارسی ",
+            "انگلیسی",
+            "فرانسوی",
+            "آلمانی"});
+            this.checkedListBoxLanguage.Location = new System.Drawing.Point(462, 37);
+            this.checkedListBoxLanguage.Name = "checkedListBoxLanguage";
+            this.checkedListBoxLanguage.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBoxLanguage.TabIndex = 10;
+            this.checkedListBoxLanguage.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxLanguage_ItemCheck);
+            // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Location = new System.Drawing.Point(487, 153);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.TabIndex = 11;
+            this.btnLanguage.Text = "Go";
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
             // frmInscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 450);
+            this.Controls.Add(this.btnLanguage);
+            this.Controls.Add(this.checkedListBoxLanguage);
             this.Controls.Add(this.GbBackColor);
             this.Controls.Add(this.GbForeColor);
             this.Controls.Add(this.GbNameAndAge);
@@ -296,6 +324,8 @@
         private System.Windows.Forms.RadioButton RadioBtnBackYellow;
         private System.Windows.Forms.RadioButton RadioBtnBackGray;
         private System.Windows.Forms.RadioButton RadioBtnBackBlue;
+        private System.Windows.Forms.CheckedListBox checkedListBoxLanguage;
+        private System.Windows.Forms.Button btnLanguage;
     }
 }
 
