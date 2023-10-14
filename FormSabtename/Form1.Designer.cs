@@ -291,6 +291,7 @@
             this.Name = "frmInscription";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "فرم ثبت نام";
             this.GbxLetterDigit.ResumeLayout(false);
             this.GbxLetterDigit.PerformLayout();

@@ -85,13 +85,9 @@ namespace FormSabtename
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            str = new StringBuilder();
-            checkLanguages.Distinct();
-
-            foreach (var item in checkLanguages)
-
-                str.AppendLine(item);
-            MessageBox.Show(str.ToString());
+            var resultPopup = new ResultForm();
+            resultPopup.UpdateListBox(checkLanguages.Distinct().ToList());
+            resultPopup.ShowDialog();
 
         }
     }
