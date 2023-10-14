@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace FormSabtename
 {
-    public partial class Form1 : Form
+    public partial class frmInscription : Form
     {
-        public Form1()
+        public frmInscription()
         {
             InitializeComponent();
         }
 
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           lbl.Text =  e.KeyChar.ToString();
-        }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FormSabtename
 {
-    partial class Form1
+    partial class frmInscription
     {
         /// <summary>
         /// Required designer variable.
@@ -28,69 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.textLastName = new System.Windows.Forms.TextBox();
-            this.textAge = new System.Windows.Forms.TextBox();
-            this.lbl = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInscription));
+            this.txtLetter = new System.Windows.Forms.TextBox();
+            this.txtDigit = new System.Windows.Forms.TextBox();
+            this.GbxLetterDigit = new System.Windows.Forms.GroupBox();
+            this.lblDigit = new System.Windows.Forms.Label();
+            this.lblLetter = new System.Windows.Forms.Label();
+            this.GbxLetterDigit.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtName
+            // txtLetter
             // 
-            this.txtName.Location = new System.Drawing.Point(126, 27);
-            this.txtName.Name = "txtName";
-            this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtName.Size = new System.Drawing.Size(139, 20);
-            this.txtName.TabIndex = 0;
-            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
+            this.txtLetter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtLetter.Location = new System.Drawing.Point(102, 34);
+            this.txtLetter.Name = "txtLetter";
+            this.txtLetter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtLetter.Size = new System.Drawing.Size(37, 20);
+            this.txtLetter.TabIndex = 0;
+            this.txtLetter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textLastName
+            // txtDigit
             // 
-            this.textLastName.Location = new System.Drawing.Point(126, 72);
-            this.textLastName.Name = "textLastName";
-            this.textLastName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textLastName.Size = new System.Drawing.Size(139, 20);
-            this.textLastName.TabIndex = 1;
-            this.textLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDigit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txtDigit.Location = new System.Drawing.Point(102, 78);
+            this.txtDigit.Name = "txtDigit";
+            this.txtDigit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDigit.Size = new System.Drawing.Size(37, 20);
+            this.txtDigit.TabIndex = 5;
+            this.txtDigit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textAge
+            // GbxLetterDigit
             // 
-            this.textAge.Location = new System.Drawing.Point(126, 120);
-            this.textAge.Name = "textAge";
-            this.textAge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textAge.Size = new System.Drawing.Size(139, 20);
-            this.textAge.TabIndex = 2;
-            this.textAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.GbxLetterDigit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.GbxLetterDigit.Controls.Add(this.lblDigit);
+            this.GbxLetterDigit.Controls.Add(this.lblLetter);
+            this.GbxLetterDigit.Controls.Add(this.txtLetter);
+            this.GbxLetterDigit.Controls.Add(this.txtDigit);
+            this.GbxLetterDigit.Location = new System.Drawing.Point(24, 33);
+            this.GbxLetterDigit.Name = "GbxLetterDigit";
+            this.GbxLetterDigit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.GbxLetterDigit.Size = new System.Drawing.Size(193, 119);
+            this.GbxLetterDigit.TabIndex = 6;
+            this.GbxLetterDigit.TabStop = false;
+            this.GbxLetterDigit.Text = "تبدیل حروف به عدد";
             // 
-            // lbl
+            // lblDigit
             // 
-            this.lbl.Location = new System.Drawing.Point(145, 172);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(100, 23);
-            this.lbl.TabIndex = 3;
+            this.lblDigit.AutoSize = true;
+            this.lblDigit.Location = new System.Drawing.Point(157, 81);
+            this.lblDigit.Name = "lblDigit";
+            this.lblDigit.Size = new System.Drawing.Size(24, 13);
+            this.lblDigit.TabIndex = 7;
+            this.lblDigit.Text = "عدد";
             // 
-            // Form1
+            // lblLetter
+            // 
+            this.lblLetter.AutoSize = true;
+            this.lblLetter.Location = new System.Drawing.Point(157, 37);
+            this.lblLetter.Name = "lblLetter";
+            this.lblLetter.Size = new System.Drawing.Size(28, 13);
+            this.lblLetter.TabIndex = 6;
+            this.lblLetter.Text = "حرف";
+            // 
+            // frmInscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lbl);
-            this.Controls.Add(this.textAge);
-            this.Controls.Add(this.textLastName);
-            this.Controls.Add(this.txtName);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.GbxLetterDigit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmInscription";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            this.Text = "فرم ثبت نام";
+            this.GbxLetterDigit.ResumeLayout(false);
+            this.GbxLetterDigit.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textLastName;
-        private System.Windows.Forms.TextBox textAge;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txtLetter;
+        private System.Windows.Forms.TextBox txtDigit;
+        private System.Windows.Forms.GroupBox GbxLetterDigit;
+        private System.Windows.Forms.Label lblDigit;
+        private System.Windows.Forms.Label lblLetter;
     }
 }
 
