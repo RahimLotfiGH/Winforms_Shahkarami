@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Menu
@@ -16,6 +10,7 @@ namespace Menu
         public formMain()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -107,13 +102,17 @@ namespace Menu
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
         {
-            var dialogResult = MessageBox.Show("Do you wanna save the file before closing? "
-                ,"Exit"
-                ,MessageBoxButtons.OKCancel);
-            if (dialogResult == DialogResult.OK)
+            if (richTxtBox.Text != string.Empty)
             {
-                HandleSaveFile();
+                var dialogResult = MessageBox.Show("Do you wanna save the file before closing? "
+                , "Exit"
+                , MessageBoxButtons.OKCancel);
+                if (dialogResult == DialogResult.OK)
+                {
+                    HandleSaveFile();
+                }
             }
+
 
             Environment.Exit(0);
         }
@@ -136,6 +135,29 @@ namespace Menu
         private void pasteMenuItem_Click(object sender, EventArgs e)
         {
             richTxtBox.Paste();
+        }
+
+        private void btn_MouseHover(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.Coral;
+        }
+
+        private void btn_MouseuP(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.FromArgb(153, 180, 209);
+        }
+
+        private void picBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "https://heilton.com/");
+
+        }
+
+        private void btn_MouseHover(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

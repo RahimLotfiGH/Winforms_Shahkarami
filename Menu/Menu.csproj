@@ -107,5 +107,11 @@
   <ItemGroup>
     <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-font.256.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
