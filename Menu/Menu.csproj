@@ -113,5 +113,35 @@
   <ItemGroup>
     <None Include="Resources\Screenshot_11.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Image_icon-icons.com_54218.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_icon_153794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_25355.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_23057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_paste_document_file_1557.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut_icon-icons.com_52391.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_78348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photos_31086.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_icon_251069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_closethesession_close_6317.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

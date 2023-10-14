@@ -51,15 +51,16 @@
             this.ToolBar = new System.Windows.Forms.ToolStrip();
             this.tNew = new System.Windows.Forms.ToolStripButton();
             this.tCopy = new System.Windows.Forms.ToolStripButton();
+            this.tPaste = new System.Windows.Forms.ToolStripButton();
             this.tCut = new System.Windows.Forms.ToolStripButton();
             this.tSave = new System.Windows.Forms.ToolStripButton();
-            this.tPaste = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tColor = new System.Windows.Forms.ToolStripButton();
             this.tFont = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.PicBoxBtn = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tExit = new System.Windows.Forms.ToolStripButton();
-            this.picBox = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnFont = new System.Windows.Forms.Button();
@@ -67,12 +68,14 @@
             this.btnFolder = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.copyRightStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.picBox = new System.Windows.Forms.PictureBox();
             fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.ToolBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // fileMenuItem
@@ -168,7 +171,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.LightCyan;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             fileMenuItem,
             this.editToolStripMenuItem});
@@ -232,17 +235,19 @@
             // 
             // ToolBar
             // 
-            this.ToolBar.BackColor = System.Drawing.SystemColors.Menu;
+            this.ToolBar.BackColor = System.Drawing.Color.LightCyan;
             this.ToolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tNew,
             this.tCopy,
+            this.tPaste,
             this.tCut,
             this.tSave,
-            this.tPaste,
             this.toolStripSeparator1,
             this.tColor,
             this.tFont,
             this.toolStripSeparator2,
+            this.PicBoxBtn,
+            this.toolStripSeparator3,
             this.tExit});
             this.ToolBar.Location = new System.Drawing.Point(0, 24);
             this.ToolBar.Name = "ToolBar";
@@ -252,7 +257,7 @@
             // tNew
             // 
             this.tNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tNew.Image = global::Menu.Properties.Resources.Custom_Icon_Design_Flatastic_10_New_file_512;
+            this.tNew.Image = global::Menu.Properties.Resources.new_25355;
             this.tNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tNew.Name = "tNew";
             this.tNew.Size = new System.Drawing.Size(23, 22);
@@ -261,16 +266,25 @@
             // tCopy
             // 
             this.tCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tCopy.Image = global::Menu.Properties.Resources.Custom_Icon_Design_Mono_General_2_Copy_512;
+            this.tCopy.Image = global::Menu.Properties.Resources.copy_23057;
             this.tCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tCopy.Name = "tCopy";
             this.tCopy.Size = new System.Drawing.Size(23, 22);
             this.tCopy.Text = "Copy";
             // 
+            // tPaste
+            // 
+            this.tPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tPaste.Image = global::Menu.Properties.Resources.copy_paste_document_file_1557;
+            this.tPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tPaste.Name = "tPaste";
+            this.tPaste.Size = new System.Drawing.Size(23, 22);
+            this.tPaste.Text = "Paste";
+            // 
             // tCut
             // 
             this.tCut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tCut.Image = global::Menu.Properties.Resources.Custom_Icon_Design_Mono_General_2_Cut_512;
+            this.tCut.Image = global::Menu.Properties.Resources.cut_icon_icons_com_52391;
             this.tCut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tCut.Name = "tCut";
             this.tCut.Size = new System.Drawing.Size(23, 22);
@@ -279,20 +293,11 @@
             // tSave
             // 
             this.tSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tSave.Image = global::Menu.Properties.Resources.Hopstarter_Soft_Scraps_Save_256;
+            this.tSave.Image = global::Menu.Properties.Resources.save_78348;
             this.tSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tSave.Name = "tSave";
             this.tSave.Size = new System.Drawing.Size(23, 22);
             this.tSave.Text = "Save";
-            // 
-            // tPaste
-            // 
-            this.tPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tPaste.Image = global::Menu.Properties.Resources.Steve_Zondicons_Paste_512;
-            this.tPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tPaste.Name = "tPaste";
-            this.tPaste.Size = new System.Drawing.Size(23, 22);
-            this.tPaste.Text = "Paste";
             // 
             // toolStripSeparator1
             // 
@@ -302,7 +307,7 @@
             // tColor
             // 
             this.tColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tColor.Image = global::Menu.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_fill_color_256;
+            this.tColor.Image = global::Menu.Properties.Resources.Photos_31086;
             this.tColor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tColor.Name = "tColor";
             this.tColor.Size = new System.Drawing.Size(23, 22);
@@ -322,27 +327,30 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // PicBoxBtn
+            // 
+            this.PicBoxBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PicBoxBtn.Image = global::Menu.Properties.Resources.picture_icon_251069;
+            this.PicBoxBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PicBoxBtn.Name = "PicBoxBtn";
+            this.PicBoxBtn.Size = new System.Drawing.Size(23, 22);
+            this.PicBoxBtn.Text = "Add Image to Picture Box";
+            this.PicBoxBtn.Click += new System.EventHandler(this.PicBoxBtn_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
             // tExit
             // 
-            this.tExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tExit.Image = global::Menu.Properties.Resources.Hopstarter_Sleek_Xp_Software_Windows_Close_Program_256;
+            this.tExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tExit.Image = global::Menu.Properties.Resources.exit_closethesession_close_6317;
             this.tExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tExit.Name = "tExit";
             this.tExit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tExit.Size = new System.Drawing.Size(23, 22);
+            this.tExit.Size = new System.Drawing.Size(46, 22);
             this.tExit.Text = "Exit";
-            // 
-            // picBox
-            // 
-            this.picBox.BackColor = System.Drawing.SystemColors.Window;
-            this.picBox.Image = global::Menu.Properties.Resources.Screenshot_11;
-            this.picBox.Location = new System.Drawing.Point(713, 61);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(121, 143);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox.TabIndex = 6;
-            this.picBox.TabStop = false;
-            this.picBox.Click += new System.EventHandler(this.picBox_Click);
             // 
             // btnSave
             // 
@@ -356,6 +364,9 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseHover);
+            this.btnSave.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.btnSave.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btnOpen
             // 
@@ -369,6 +380,9 @@
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.btnOpen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseHover);
+            this.btnOpen.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.btnOpen.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btnFont
             // 
@@ -382,6 +396,9 @@
             this.btnFont.Text = "Font";
             this.btnFont.UseVisualStyleBackColor = false;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
+            this.btnFont.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseHover);
+            this.btnFont.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.btnFont.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btnColor
             // 
@@ -396,6 +413,9 @@
             this.btnColor.Text = "Color";
             this.btnColor.UseVisualStyleBackColor = false;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
+            this.btnColor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseHover);
+            this.btnColor.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.btnColor.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btnFolder
             // 
@@ -409,10 +429,13 @@
             this.btnFolder.Text = "Folder";
             this.btnFolder.UseVisualStyleBackColor = false;
             this.btnFolder.Click += new System.EventHandler(this.btnFolder_Click);
+            this.btnFolder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseHover);
+            this.btnFolder.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.btnFolder.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.statusStrip1.BackColor = System.Drawing.Color.LightCyan;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyRightStatus});
             this.statusStrip1.Location = new System.Drawing.Point(0, 489);
@@ -426,6 +449,25 @@
             this.copyRightStatus.Name = "copyRightStatus";
             this.copyRightStatus.Size = new System.Drawing.Size(143, 17);
             this.copyRightStatus.Text = "Copyright © 2023 Heilton";
+            // 
+            // timer
+            // 
+            this.timer.Interval = 10;
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // picBox
+            // 
+            this.picBox.BackColor = System.Drawing.SystemColors.Window;
+            this.picBox.Image = global::Menu.Properties.Resources.Screenshot_11;
+            this.picBox.Location = new System.Drawing.Point(713, 61);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(109, 143);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 6;
+            this.picBox.TabStop = false;
+            this.picBox.Click += new System.EventHandler(this.picBox_Click);
+            this.picBox.MouseLeave += new System.EventHandler(this.picBox_MouseLeave);
+            this.picBox.MouseHover += new System.EventHandler(this.picBox_MouseHover);
             // 
             // formMain
             // 
@@ -458,9 +500,9 @@
             this.menuStrip1.PerformLayout();
             this.ToolBar.ResumeLayout(false);
             this.ToolBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +546,9 @@
         private System.Windows.Forms.Button btnFolder;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel copyRightStatus;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripButton PicBoxBtn;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

@@ -140,13 +140,16 @@ namespace Menu
         private void btn_MouseHover(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.BackColor = Color.Coral;
+            timer.Start();
+            btn.BackColor = Color.FromArgb(173, 216, 230);
         }
 
-        private void btn_MouseuP(object sender, MouseEventArgs e)
+        private void btn_MouseLeave(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.BackColor = Color.FromArgb(153, 180, 209);
+            timer.Stop();
+            btn.BackColor = Color.FromArgb(215, 228, 242);
+
         }
 
         private void picBox_Click(object sender, EventArgs e)
@@ -155,9 +158,37 @@ namespace Menu
 
         }
 
-        private void btn_MouseHover(object sender, MouseEventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void picBox_MouseHover(object sender, EventArgs e)
+        {
+            picBox.Size = new Size(112, 152);
+        }
+
+        private void picBox_MouseLeave(object sender, EventArgs e)
+        {
+            picBox.Size = new Size(109, 143);
+           
+        }
+
+        private void PicBoxBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDialog = InitializeOpenDialogForPic();
+
+            if (openDialog.ShowDialog() == DialogResult.OK)
+                picBox.Image = Image.FromFile(openDialog.FileName);
+
+        }
+
+        private static OpenFileDialog InitializeOpenDialogForPic()
+        {
+            var openDialog = new OpenFileDialog();
+            openDialog.Title = "Select an Image";
+            openDialog.Filter = "Image Files(*.Jpg;*.Png)|*.Jpg;*.Png";
+            return openDialog;
         }
     }
 }

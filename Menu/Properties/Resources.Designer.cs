@@ -63,6 +63,36 @@ namespace Menu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Image_icon_icons_com_54218 {
+            get {
+                object obj = ResourceManager.GetObject("Add_Image_icon-icons.com_54218", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copy_23057 {
+            get {
+                object obj = ResourceManager.GetObject("copy_23057", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copy_paste_document_file_1557 {
+            get {
+                object obj = ResourceManager.GetObject("copy_paste_document_file_1557", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Custom_Icon_Design_Flatastic_10_New_file_512 {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Flatastic-10-New-file.512", resourceCulture);
@@ -86,6 +116,26 @@ namespace Menu.Properties {
         internal static System.Drawing.Bitmap Custom_Icon_Design_Mono_General_2_Cut_512 {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Mono-General-2-Cut.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cut_icon_icons_com_52391 {
+            get {
+                object obj = ResourceManager.GetObject("cut_icon-icons.com_52391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_closethesession_close_6317 {
+            get {
+                object obj = ResourceManager.GetObject("exit_closethesession_close_6317", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +173,26 @@ namespace Menu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_icon_153794 {
+            get {
+                object obj = ResourceManager.GetObject("image_icon_153794", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_25355 {
+            get {
+                object obj = ResourceManager.GetObject("new_25355", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_fill_color_256 {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-fill-color.256", resourceCulture);
@@ -136,6 +206,36 @@ namespace Menu.Properties {
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Apps_preferences_desktop_font_256 {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-font.256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Photos_31086 {
+            get {
+                object obj = ResourceManager.GetObject("Photos_31086", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap picture_icon_251069 {
+            get {
+                object obj = ResourceManager.GetObject("picture_icon_251069", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_78348 {
+            get {
+                object obj = ResourceManager.GetObject("save_78348", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
