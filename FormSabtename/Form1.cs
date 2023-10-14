@@ -86,10 +86,33 @@ namespace FormSabtename
         private void btnLanguage_Click(object sender, EventArgs e)
         {
             var resultPopup = new ResultForm();
-           // resultPopup.MdiParent = this;
+            // resultPopup.MdiParent = this;
             resultPopup.UpdateListBox(checkLanguages.Distinct().ToList());
             resultPopup.Show();
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddItemInListBoxNames();
+        }
+
+        private void AddItemInListBoxNames()
+        {
+            lstBoxNames.Items.Add(txttNames.Text);
+            txttNames.Text = string.Empty;
+            txttNames.Focus();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            lstBoxNames.Items.Remove(lstBoxNames.SelectedItem);
+        }
+
+        private void txttNames_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                AddItemInListBoxNames();
         }
     }
 }

@@ -49,6 +49,10 @@
             this.RadioBtnBackBlue = new System.Windows.Forms.RadioButton();
             this.checkedListBoxLanguage = new System.Windows.Forms.CheckedListBox();
             this.btnLanguage = new System.Windows.Forms.Button();
+            this.lstBoxNames = new System.Windows.Forms.ListBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txttNames = new System.Windows.Forms.TextBox();
             this.GbxLetterDigit.SuspendLayout();
             this.GbNameAndAge.SuspendLayout();
             this.GbForeColor.SuspendLayout();
@@ -111,6 +115,7 @@
             // 
             // GbNameAndAge
             // 
+            this.GbNameAndAge.BackColor = System.Drawing.SystemColors.ControlLight;
             this.GbNameAndAge.Controls.Add(this.txtAge);
             this.GbNameAndAge.Controls.Add(this.txtName);
             this.GbNameAndAge.Controls.Add(this.lblAge);
@@ -158,6 +163,7 @@
             // 
             // GbForeColor
             // 
+            this.GbForeColor.BackColor = System.Drawing.SystemColors.ControlLight;
             this.GbForeColor.Controls.Add(this.RadioBtnForekBlue);
             this.GbForeColor.Controls.Add(this.RadioBtnForeBlack);
             this.GbForeColor.Controls.Add(this.RadioBtnForeGreen);
@@ -206,6 +212,7 @@
             // 
             // GbBackColor
             // 
+            this.GbBackColor.BackColor = System.Drawing.SystemColors.ControlLight;
             this.GbBackColor.Controls.Add(this.RadioBtnBackYellow);
             this.GbBackColor.Controls.Add(this.RadioBtnBackGray);
             this.GbBackColor.Controls.Add(this.RadioBtnBackBlue);
@@ -254,33 +261,77 @@
             // 
             // checkedListBoxLanguage
             // 
+            this.checkedListBoxLanguage.BackColor = System.Drawing.SystemColors.ControlLight;
             this.checkedListBoxLanguage.FormattingEnabled = true;
             this.checkedListBoxLanguage.Items.AddRange(new object[] {
             "فارسی ",
             "انگلیسی",
             "فرانسوی",
             "آلمانی"});
-            this.checkedListBoxLanguage.Location = new System.Drawing.Point(462, 37);
+            this.checkedListBoxLanguage.Location = new System.Drawing.Point(17, 287);
             this.checkedListBoxLanguage.Name = "checkedListBoxLanguage";
-            this.checkedListBoxLanguage.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBoxLanguage.Size = new System.Drawing.Size(98, 79);
             this.checkedListBoxLanguage.TabIndex = 10;
             this.checkedListBoxLanguage.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxLanguage_ItemCheck);
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(487, 153);
+            this.btnLanguage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLanguage.Location = new System.Drawing.Point(35, 402);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.Size = new System.Drawing.Size(59, 23);
             this.btnLanguage.TabIndex = 11;
             this.btnLanguage.Text = "Go";
-            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.UseVisualStyleBackColor = false;
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
+            // lstBoxNames
+            // 
+            this.lstBoxNames.FormattingEnabled = true;
+            this.lstBoxNames.Location = new System.Drawing.Point(136, 287);
+            this.lstBoxNames.Name = "lstBoxNames";
+            this.lstBoxNames.Size = new System.Drawing.Size(120, 82);
+            this.lstBoxNames.TabIndex = 12;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete.Location = new System.Drawing.Point(124, 402);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(63, 25);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdd.Location = new System.Drawing.Point(193, 402);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(63, 25);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txttNames
+            // 
+            this.txttNames.Location = new System.Drawing.Point(146, 375);
+            this.txttNames.Name = "txttNames";
+            this.txttNames.Size = new System.Drawing.Size(100, 20);
+            this.txttNames.TabIndex = 16;
+            this.txttNames.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttNames_KeyPress);
             // 
             // frmInscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 450);
+            this.Controls.Add(this.txttNames);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.lstBoxNames);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.checkedListBoxLanguage);
             this.Controls.Add(this.GbBackColor);
@@ -288,7 +339,6 @@
             this.Controls.Add(this.GbNameAndAge);
             this.Controls.Add(this.GbxLetterDigit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.Name = "frmInscription";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -303,6 +353,7 @@
             this.GbBackColor.ResumeLayout(false);
             this.GbBackColor.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -328,6 +379,10 @@
         private System.Windows.Forms.RadioButton RadioBtnBackBlue;
         private System.Windows.Forms.CheckedListBox checkedListBoxLanguage;
         private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.ListBox lstBoxNames;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txttNames;
     }
 }
 
