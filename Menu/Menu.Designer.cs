@@ -67,10 +67,9 @@
             this.btnFolder = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.copyRightStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelPicLgAndLbl = new System.Windows.Forms.Panel();
-            this.lblPicLgPanel = new System.Windows.Forms.Label();
             this.picBoxLg = new System.Windows.Forms.PictureBox();
+            this.lblPicLgPanel = new System.Windows.Forms.Label();
             this.picBox = new System.Windows.Forms.PictureBox();
             fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
@@ -256,6 +255,7 @@
             this.tNew.Name = "tNew";
             this.tNew.Size = new System.Drawing.Size(23, 22);
             this.tNew.Text = "New";
+            this.tNew.Click += new System.EventHandler(this.NewMenuItem_Click);
             // 
             // tCopy
             // 
@@ -265,6 +265,7 @@
             this.tCopy.Name = "tCopy";
             this.tCopy.Size = new System.Drawing.Size(23, 22);
             this.tCopy.Text = "Copy";
+            this.tCopy.Click += new System.EventHandler(this.copyMenuItem_Click);
             // 
             // tPaste
             // 
@@ -274,6 +275,7 @@
             this.tPaste.Name = "tPaste";
             this.tPaste.Size = new System.Drawing.Size(23, 22);
             this.tPaste.Text = "Paste";
+            this.tPaste.Click += new System.EventHandler(this.pasteMenuItem_Click);
             // 
             // tCut
             // 
@@ -283,6 +285,7 @@
             this.tCut.Name = "tCut";
             this.tCut.Size = new System.Drawing.Size(23, 22);
             this.tCut.Text = "Cut";
+            this.tCut.Click += new System.EventHandler(this.cutMenuItem_Click);
             // 
             // tSave
             // 
@@ -292,6 +295,7 @@
             this.tSave.Name = "tSave";
             this.tSave.Size = new System.Drawing.Size(23, 22);
             this.tSave.Text = "Save";
+            this.tSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // toolStripSeparator1
             // 
@@ -306,6 +310,7 @@
             this.tColor.Name = "tColor";
             this.tColor.Size = new System.Drawing.Size(23, 22);
             this.tColor.Text = "Color";
+            this.tColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // tFont
             // 
@@ -315,6 +320,7 @@
             this.tFont.Name = "tFont";
             this.tFont.Size = new System.Drawing.Size(23, 22);
             this.tFont.Text = "Font";
+            this.tFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
             // toolStripSeparator2
             // 
@@ -329,6 +335,7 @@
             this.PicBoxBtn.Name = "PicBoxBtn";
             this.PicBoxBtn.Size = new System.Drawing.Size(23, 22);
             this.PicBoxBtn.Text = "Add Image to Picture Box";
+            this.PicBoxBtn.Click += new System.EventHandler(this.picBoxLg_Click);
             // 
             // toolStripSeparator3
             // 
@@ -433,11 +440,6 @@
             this.copyRightStatus.Size = new System.Drawing.Size(143, 17);
             this.copyRightStatus.Text = "Copyright © 2023 Heilton";
             // 
-            // timer
-            // 
-            this.timer.Interval = 10;
-            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // panelPicLgAndLbl
             // 
             this.panelPicLgAndLbl.Controls.Add(this.picBoxLg);
@@ -448,17 +450,6 @@
             this.panelPicLgAndLbl.TabIndex = 17;
             this.panelPicLgAndLbl.Visible = false;
             this.panelPicLgAndLbl.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
-            // 
-            // lblPicLgPanel
-            // 
-            this.lblPicLgPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblPicLgPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPicLgPanel.Location = new System.Drawing.Point(0, 157);
-            this.lblPicLgPanel.Name = "lblPicLgPanel";
-            this.lblPicLgPanel.Padding = new System.Windows.Forms.Padding(2);
-            this.lblPicLgPanel.Size = new System.Drawing.Size(135, 26);
-            this.lblPicLgPanel.TabIndex = 17;
-            this.lblPicLgPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picBoxLg
             // 
@@ -473,6 +464,17 @@
             this.picBoxLg.TabStop = false;
             this.picBoxLg.Click += new System.EventHandler(this.picBox_Click);
             this.picBoxLg.MouseLeave += new System.EventHandler(this.picBoxLg_MouseLeave);
+            // 
+            // lblPicLgPanel
+            // 
+            this.lblPicLgPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblPicLgPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPicLgPanel.Location = new System.Drawing.Point(0, 157);
+            this.lblPicLgPanel.Name = "lblPicLgPanel";
+            this.lblPicLgPanel.Padding = new System.Windows.Forms.Padding(2);
+            this.lblPicLgPanel.Size = new System.Drawing.Size(135, 26);
+            this.lblPicLgPanel.TabIndex = 17;
+            this.lblPicLgPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picBox
             // 
@@ -565,7 +567,6 @@
         private System.Windows.Forms.Button btnFolder;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel copyRightStatus;
-        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripButton PicBoxBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.PictureBox picBoxLg;

@@ -140,14 +140,12 @@ namespace Menu
         private void btn_MouseHover(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            timer.Start();
             btn.BackColor = Color.FromArgb(173, 216, 230);
         }
 
         private void btn_MouseLeave(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            timer.Stop();
             btn.BackColor = Color.FromArgb(215, 228, 242);
 
         }
@@ -157,12 +155,6 @@ namespace Menu
             Process.Start("chrome.exe", "https://heilton.com/");
 
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
 
         private static OpenFileDialog InitializeOpenDialogForPic()
         {
