@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1372AE60-0DEB-4C5F-9F7C-AF4FE47A5244}</ProjectGuid>
+    <ProjectGuid>{D0487578-C138-4124-9AE9-C9162CD8C740}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Menu</RootNamespace>
-    <AssemblyName>Menu</AssemblyName>
+    <RootNamespace>FormSabtename</RootNamespace>
+    <AssemblyName>FormSabtename</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,72 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Folder-Open.256.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hopstarter-Soft-Scraps-Save.256.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Custom-Icon-Design-Flatastic-10-New-file.512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hopstarter-Sleek-Xp-Software-Windows-Close-Program.256.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Custom-Icon-Design-Mono-General-2-Copy.512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Custom-Icon-Design-Mono-General-2-Cut.512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Steve-Zondicons-Paste.512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-fill-color.256.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-font.256.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Add_Image_icon-icons.com_54218.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_icon_153794.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\new_25355.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\copy_23057.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\copy_paste_document_file_1557.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cut_icon-icons.com_52391.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save_78348.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Photos_31086.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\picture_icon_251069.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_closethesession_close_6317.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot_12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Screenshot_11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
