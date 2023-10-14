@@ -34,7 +34,13 @@
             this.GbxLetterDigit = new System.Windows.Forms.GroupBox();
             this.lblDigit = new System.Windows.Forms.Label();
             this.lblLetter = new System.Windows.Forms.Label();
+            this.GbNameAndAge = new System.Windows.Forms.GroupBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.GbxLetterDigit.SuspendLayout();
+            this.GbNameAndAge.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtLetter
@@ -91,11 +97,59 @@
             this.lblLetter.TabIndex = 6;
             this.lblLetter.Text = "حرف";
             // 
+            // GbNameAndAge
+            // 
+            this.GbNameAndAge.Controls.Add(this.txtAge);
+            this.GbNameAndAge.Controls.Add(this.txtName);
+            this.GbNameAndAge.Controls.Add(this.lblAge);
+            this.GbNameAndAge.Controls.Add(this.lblName);
+            this.GbNameAndAge.Location = new System.Drawing.Point(17, 170);
+            this.GbNameAndAge.Name = "GbNameAndAge";
+            this.GbNameAndAge.Size = new System.Drawing.Size(200, 100);
+            this.GbNameAndAge.TabIndex = 7;
+            this.GbNameAndAge.TabStop = false;
+            this.GbNameAndAge.Text = "گرفتن نام و سن";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(157, 27);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(20, 13);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "نام";
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Location = new System.Drawing.Point(157, 68);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(23, 13);
+            this.lblAge.TabIndex = 1;
+            this.lblAge.Text = "سن";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(29, 27);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 2;
+            this.txtName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtName_PreviewKeyDown);
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(29, 65);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(100, 20);
+            this.txtAge.TabIndex = 3;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
+            // 
             // frmInscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(658, 450);
+            this.Controls.Add(this.GbNameAndAge);
             this.Controls.Add(this.GbxLetterDigit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInscription";
@@ -104,6 +158,8 @@
             this.Text = "فرم ثبت نام";
             this.GbxLetterDigit.ResumeLayout(false);
             this.GbxLetterDigit.PerformLayout();
+            this.GbNameAndAge.ResumeLayout(false);
+            this.GbNameAndAge.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -115,6 +171,11 @@
         private System.Windows.Forms.GroupBox GbxLetterDigit;
         private System.Windows.Forms.Label lblDigit;
         private System.Windows.Forms.Label lblLetter;
+        private System.Windows.Forms.GroupBox GbNameAndAge;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label lblName;
     }
 }
 
