@@ -46,6 +46,7 @@
             this.txtLetter.Size = new System.Drawing.Size(37, 20);
             this.txtLetter.TabIndex = 0;
             this.txtLetter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLetter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetter_KeyPress);
             // 
             // txtDigit
             // 

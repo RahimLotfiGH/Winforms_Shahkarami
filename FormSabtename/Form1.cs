@@ -17,6 +17,11 @@ namespace FormSabtename
             InitializeComponent();
         }
 
+        private void txtLetter_KeyPress(object sender, KeyPressEventArgs e)
+        {
 
+            txtDigit.Text = (txtDigit.Text != string.Empty) ? string.Empty + ((int)e.KeyChar).ToString() : ((int)e.KeyChar).ToString();
+            txtLetter.Text = string.Empty;
+        }
     }
 }
