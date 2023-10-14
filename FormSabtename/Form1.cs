@@ -86,8 +86,9 @@ namespace FormSabtename
         private void btnLanguage_Click(object sender, EventArgs e)
         {
             var resultPopup = new ResultForm();
+           // resultPopup.MdiParent = this;
             resultPopup.UpdateListBox(checkLanguages.Distinct().ToList());
-            resultPopup.ShowDialog();
+            resultPopup.Show();
 
         }
     }

@@ -44,7 +44,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.BackColor = System.Drawing.Color.Azure;
+            this.btnOk.BackColor = System.Drawing.Color.FloralWhite;
             this.btnOk.Location = new System.Drawing.Point(80, 123);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);

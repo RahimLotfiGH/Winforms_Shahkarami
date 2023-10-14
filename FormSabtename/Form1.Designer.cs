@@ -288,6 +288,7 @@
             this.Controls.Add(this.GbNameAndAge);
             this.Controls.Add(this.GbxLetterDigit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "frmInscription";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
