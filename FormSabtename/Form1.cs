@@ -40,5 +40,34 @@ namespace FormSabtename
             CultureInfo language = new CultureInfo("fa-ir");
             InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(language);
         }
+
+        private void radioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+           var btn = (RadioButton)sender;
+            switch (btn.Name)
+            {
+                case "RadioBtnBackBlue": 
+                    BackColor = Color.Blue;
+                    break;
+                case "RadioBtnBackGray":
+                    BackColor = Color.Gray;
+                    break;
+                case "RadioBtnBackYellow":
+                    BackColor = Color.Yellow;
+                    break;
+
+                case "RadioBtnForeGreen":
+                    ForeColor = Color.Green;
+                    break;
+                case "RadioBtnForeBlack":
+                    ForeColor = Color.Black;
+                    break;
+                case "RadioBtnForeBlue":
+                    ForeColor = Color.Blue;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

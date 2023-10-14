@@ -35,12 +35,22 @@
             this.lblDigit = new System.Windows.Forms.Label();
             this.lblLetter = new System.Windows.Forms.Label();
             this.GbNameAndAge = new System.Windows.Forms.GroupBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.GbForeColor = new System.Windows.Forms.GroupBox();
+            this.RadioBtnForekBlue = new System.Windows.Forms.RadioButton();
+            this.RadioBtnForeBlack = new System.Windows.Forms.RadioButton();
+            this.RadioBtnForeGreen = new System.Windows.Forms.RadioButton();
+            this.GbBackColor = new System.Windows.Forms.GroupBox();
+            this.RadioBtnBackYellow = new System.Windows.Forms.RadioButton();
+            this.RadioBtnBackGray = new System.Windows.Forms.RadioButton();
+            this.RadioBtnBackBlue = new System.Windows.Forms.RadioButton();
             this.GbxLetterDigit.SuspendLayout();
             this.GbNameAndAge.SuspendLayout();
+            this.GbForeColor.SuspendLayout();
+            this.GbBackColor.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtLetter
@@ -110,14 +120,21 @@
             this.GbNameAndAge.TabStop = false;
             this.GbNameAndAge.Text = "گرفتن نام و سن";
             // 
-            // lblName
+            // txtAge
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(157, 27);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(20, 13);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "نام";
+            this.txtAge.Location = new System.Drawing.Point(29, 65);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(100, 20);
+            this.txtAge.TabIndex = 3;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(29, 27);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 2;
+            this.txtName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtName_PreviewKeyDown);
             // 
             // lblAge
             // 
@@ -128,27 +145,118 @@
             this.lblAge.TabIndex = 1;
             this.lblAge.Text = "سن";
             // 
-            // txtName
+            // lblName
             // 
-            this.txtName.Location = new System.Drawing.Point(29, 27);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 2;
-            this.txtName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtName_PreviewKeyDown);
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(157, 27);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(20, 13);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "نام";
             // 
-            // txtAge
+            // GbForeColor
             // 
-            this.txtAge.Location = new System.Drawing.Point(29, 65);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(100, 20);
-            this.txtAge.TabIndex = 3;
-            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
+            this.GbForeColor.Controls.Add(this.RadioBtnForekBlue);
+            this.GbForeColor.Controls.Add(this.RadioBtnForeBlack);
+            this.GbForeColor.Controls.Add(this.RadioBtnForeGreen);
+            this.GbForeColor.Location = new System.Drawing.Point(429, 33);
+            this.GbForeColor.Name = "GbForeColor";
+            this.GbForeColor.Size = new System.Drawing.Size(200, 100);
+            this.GbForeColor.TabIndex = 8;
+            this.GbForeColor.TabStop = false;
+            this.GbForeColor.Text = "تغییر رنگ قلم";
+            // 
+            // RadioBtnForekBlue
+            // 
+            this.RadioBtnForekBlue.AutoSize = true;
+            this.RadioBtnForekBlue.Location = new System.Drawing.Point(151, 79);
+            this.RadioBtnForekBlue.Name = "RadioBtnForekBlue";
+            this.RadioBtnForekBlue.Size = new System.Drawing.Size(43, 17);
+            this.RadioBtnForekBlue.TabIndex = 2;
+            this.RadioBtnForekBlue.TabStop = true;
+            this.RadioBtnForekBlue.Text = "آبی";
+            this.RadioBtnForekBlue.UseVisualStyleBackColor = true;
+            this.RadioBtnForekBlue.CheckedChanged += new System.EventHandler(this.radioButtons_CheckedChanged);
+            // 
+            // RadioBtnForeBlack
+            // 
+            this.RadioBtnForeBlack.AutoSize = true;
+            this.RadioBtnForeBlack.Location = new System.Drawing.Point(146, 56);
+            this.RadioBtnForeBlack.Name = "RadioBtnForeBlack";
+            this.RadioBtnForeBlack.Size = new System.Drawing.Size(48, 17);
+            this.RadioBtnForeBlack.TabIndex = 1;
+            this.RadioBtnForeBlack.TabStop = true;
+            this.RadioBtnForeBlack.Text = "سیاه";
+            this.RadioBtnForeBlack.UseVisualStyleBackColor = true;
+            this.RadioBtnForeBlack.CheckedChanged += new System.EventHandler(this.radioButtons_CheckedChanged);
+            // 
+            // RadioBtnForeGreen
+            // 
+            this.RadioBtnForeGreen.AutoSize = true;
+            this.RadioBtnForeGreen.Location = new System.Drawing.Point(151, 33);
+            this.RadioBtnForeGreen.Name = "RadioBtnForeGreen";
+            this.RadioBtnForeGreen.Size = new System.Drawing.Size(43, 17);
+            this.RadioBtnForeGreen.TabIndex = 0;
+            this.RadioBtnForeGreen.TabStop = true;
+            this.RadioBtnForeGreen.Text = "سبز";
+            this.RadioBtnForeGreen.UseVisualStyleBackColor = true;
+            this.RadioBtnForeGreen.CheckedChanged += new System.EventHandler(this.radioButtons_CheckedChanged);
+            // 
+            // GbBackColor
+            // 
+            this.GbBackColor.Controls.Add(this.RadioBtnBackYellow);
+            this.GbBackColor.Controls.Add(this.RadioBtnBackGray);
+            this.GbBackColor.Controls.Add(this.RadioBtnBackBlue);
+            this.GbBackColor.Location = new System.Drawing.Point(429, 170);
+            this.GbBackColor.Name = "GbBackColor";
+            this.GbBackColor.Size = new System.Drawing.Size(200, 100);
+            this.GbBackColor.TabIndex = 9;
+            this.GbBackColor.TabStop = false;
+            this.GbBackColor.Text = "تغییر رنگ زمینه";
+            // 
+            // RadioBtnBackYellow
+            // 
+            this.RadioBtnBackYellow.AutoSize = true;
+            this.RadioBtnBackYellow.Location = new System.Drawing.Point(154, 77);
+            this.RadioBtnBackYellow.Name = "RadioBtnBackYellow";
+            this.RadioBtnBackYellow.Size = new System.Drawing.Size(40, 17);
+            this.RadioBtnBackYellow.TabIndex = 3;
+            this.RadioBtnBackYellow.TabStop = true;
+            this.RadioBtnBackYellow.Text = "زرد";
+            this.RadioBtnBackYellow.UseVisualStyleBackColor = true;
+            this.RadioBtnBackYellow.Click += new System.EventHandler(this.radioButtons_CheckedChanged);
+            // 
+            // RadioBtnBackGray
+            // 
+            this.RadioBtnBackGray.AutoSize = true;
+            this.RadioBtnBackGray.Location = new System.Drawing.Point(123, 53);
+            this.RadioBtnBackGray.Name = "RadioBtnBackGray";
+            this.RadioBtnBackGray.Size = new System.Drawing.Size(71, 17);
+            this.RadioBtnBackGray.TabIndex = 2;
+            this.RadioBtnBackGray.TabStop = true;
+            this.RadioBtnBackGray.Text = "خاکستری";
+            this.RadioBtnBackGray.UseVisualStyleBackColor = true;
+            this.RadioBtnBackGray.Click += new System.EventHandler(this.radioButtons_CheckedChanged);
+            // 
+            // RadioBtnBackBlue
+            // 
+            this.RadioBtnBackBlue.AutoSize = true;
+            this.RadioBtnBackBlue.Location = new System.Drawing.Point(151, 30);
+            this.RadioBtnBackBlue.Name = "RadioBtnBackBlue";
+            this.RadioBtnBackBlue.Size = new System.Drawing.Size(43, 17);
+            this.RadioBtnBackBlue.TabIndex = 1;
+            this.RadioBtnBackBlue.TabStop = true;
+            this.RadioBtnBackBlue.Text = "آبی";
+            this.RadioBtnBackBlue.UseVisualStyleBackColor = true;
+            this.RadioBtnBackBlue.Click += new System.EventHandler(this.radioButtons_CheckedChanged);
             // 
             // frmInscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 450);
+            this.Controls.Add(this.GbBackColor);
+            this.Controls.Add(this.GbForeColor);
             this.Controls.Add(this.GbNameAndAge);
             this.Controls.Add(this.GbxLetterDigit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -160,6 +268,10 @@
             this.GbxLetterDigit.PerformLayout();
             this.GbNameAndAge.ResumeLayout(false);
             this.GbNameAndAge.PerformLayout();
+            this.GbForeColor.ResumeLayout(false);
+            this.GbForeColor.PerformLayout();
+            this.GbBackColor.ResumeLayout(false);
+            this.GbBackColor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,6 +288,14 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.GroupBox GbForeColor;
+        private System.Windows.Forms.GroupBox GbBackColor;
+        private System.Windows.Forms.RadioButton RadioBtnForekBlue;
+        private System.Windows.Forms.RadioButton RadioBtnForeBlack;
+        private System.Windows.Forms.RadioButton RadioBtnForeGreen;
+        private System.Windows.Forms.RadioButton RadioBtnBackYellow;
+        private System.Windows.Forms.RadioButton RadioBtnBackGray;
+        private System.Windows.Forms.RadioButton RadioBtnBackBlue;
     }
 }
 
