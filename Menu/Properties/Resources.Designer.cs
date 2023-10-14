@@ -263,6 +263,16 @@ namespace Menu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_12 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Steve_Zondicons_Paste_512 {
             get {
                 object obj = ResourceManager.GetObject("Steve-Zondicons-Paste.512", resourceCulture);

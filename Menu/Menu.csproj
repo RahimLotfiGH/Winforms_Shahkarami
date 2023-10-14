@@ -111,9 +111,6 @@
     <None Include="Resources\Screenshot_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Screenshot_11.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Add_Image_icon-icons.com_54218.png" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit_closethesession_close_6317.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_12.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ namespace Menu
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -113,7 +114,6 @@ namespace Menu
                 }
             }
 
-
             Environment.Exit(0);
         }
 
@@ -163,25 +163,6 @@ namespace Menu
 
         }
 
-        private void picBox_MouseHover(object sender, EventArgs e)
-        {
-            picBox.Size = new Size(112, 152);
-        }
-
-        private void picBox_MouseLeave(object sender, EventArgs e)
-        {
-            picBox.Size = new Size(109, 143);
-           
-        }
-
-        private void PicBoxBtn_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openDialog = InitializeOpenDialogForPic();
-
-            if (openDialog.ShowDialog() == DialogResult.OK)
-                picBox.Image = Image.FromFile(openDialog.FileName);
-
-        }
 
         private static OpenFileDialog InitializeOpenDialogForPic()
         {
@@ -190,5 +171,27 @@ namespace Menu
             openDialog.Filter = "Image Files(*.Jpg;*.Png)|*.Jpg;*.Png";
             return openDialog;
         }
+
+        private void picBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblPicLgPanel.Text = "Heilton Group";
+            panelPicLgAndLbl.Visible = true;
+
+        }
+        private void picBoxLg_MouseLeave(object sender, EventArgs e)
+        {
+            panelPicLgAndLbl.Visible = false;
+
+        }
+
+        private void picBoxLg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDialog = InitializeOpenDialogForPic();
+
+            if (openDialog.ShowDialog() == DialogResult.OK)
+                picBox.Image = Image.FromFile(openDialog.FileName);
+        }
+
+
     }
 }
